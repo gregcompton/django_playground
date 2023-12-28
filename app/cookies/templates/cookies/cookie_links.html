@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock title%}</title>
+    <style>
+    a:link, a:visited {
+      background-color: #f44336;
+      color: white;
+      padding: 14px 25px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:hover, a:active {
+      background-color: red;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="btn-group" style="width:100%">
+        <a href="{% url 'cookies:set_cookie' %}">Set Cookie</a>
+        <a href="{% url 'cookies:get_cookie' %}">Get Cookie</a>
+        <a href="{% url 'cookies:update_cookie' %}">Update Cookie</a>
+        <a href="{% url 'cookies:redirect_update' %}">Update Cookie Redirect</a>
+        <a href="{% url 'cookies:delete_cookie' %}">Delete Cookie</a></li>
+    </div>
+    {% block content %} {% endblock content%}
+</div>
+</body>

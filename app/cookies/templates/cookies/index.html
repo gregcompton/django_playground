@@ -1,0 +1,13 @@
+{% extends 'cookies/cookie_links.html' %}
+{% block title %}COOKIES!!!{% endblock title%}
+{% block content %}
+</div>
+<h1>This is where the Cookie stuff happens</h1>
+<ul>
+    <li><a href="{% url 'cookies:set_cookie' %}">Set Cookie</a></li>
+    <li><a href="{% url 'cookies:get_cookie' %}">Get Cookie</a></li>
+    <li><a href="{% url 'cookies:update_cookie' %}">Update Cookie</a></li>
+    <li><a href="{% url 'cookies:redirect_update' %}">Update Cookie Redirect</a></li>
+    <li><a href="{% url 'cookies:delete_cookie' %}">Delete Cookie</a></li>
+</ul>
+{% endblock content%}
